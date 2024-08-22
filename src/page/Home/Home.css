@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Floreste';
+    src: url('../../../fonts/FloresteWavy.otf') format('opentype'); /* Укажите правильный путь и формат */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #AE97E8;
+}
+.custom-text {
+    font-family: 'Floreste', sans-serif;
+    font-size: 212px;
+    color: #CBB6FF99; /* Пример цвета для текста */
+    margin: 0; /* Убираем стандартные отступы для <p> */
+}
+/* Стили для десктопов (ширина экрана больше 768px) */
+@media (min-width: 768px) {
+    .header, .footer {
+        text-align: left;
+        padding: 30px 50px;
+    }
+
+    .main-content {
+        flex-wrap: nowrap;
+    }
+
+    .article {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+/* Стили для смартфонов (ширина экрана меньше 768px) */
+@media (max-width: 767px) {
+    .header, .footer {
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .article {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}

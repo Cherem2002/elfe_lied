@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Le Murmure';
+    src: url('../../../fonts/Le_Murmure-Regular_web.ttf') format('truetype'); /* Укажите правильный путь и формат */
+    font-weight: normal;
+    font-style: normal;
+}
+/* Основные стили для header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #AE97E8;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Le Murmure', sans-serif; /* Применяем шрифт к логотипу */
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Адаптивные стили для смартфонов */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-item a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Адаптивные стили для десктопов */
+@media (min-width: 768px) {
+    .header {
+        padding: 30px 50px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .nav-item a {
+        font-size: 1.1rem;
+    }
+}
