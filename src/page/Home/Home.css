@@ -7,10 +7,11 @@
 
 .Home {
     display: flex;
-    justify-content: center;
+    justify-content:  flex-start;
     align-items: center;
     height: 100vh;
     background-color: #AE97E8;
+    padding: 40px; /* Отступы вокруг контейнера, если необходимо */
 }
 .custom-text {
     font-family: 'Floreste', sans-serif;

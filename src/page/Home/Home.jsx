@@ -6,7 +6,7 @@ const Home = () => {
 
     return (
         <div className="Home">
-            <p className="custom-text">Benjamin Moore</p>
+            <p className="custom-text">BENJAMIN MOORE</p>
         </div>
     );
 };
