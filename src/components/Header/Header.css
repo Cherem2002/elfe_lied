@@ -5,8 +5,17 @@
     font-style: normal;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #AE97E8; /* Убедитесь, что фон соответствует основному цвету */
+    z-index: 11;
+}
+
 .Header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,10 +25,11 @@
     align-items: center;
     padding: 10px 20px;
     color: white;
+    font-family: 'Euclid Circular A Bold', sans-serif;
     z-index: 10;
     box-sizing: border-box; /* Учитываем padding и border в ширину */
     overflow: hidden; /* Скрывает переполнение */
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .logo {
     font-size: 45px;

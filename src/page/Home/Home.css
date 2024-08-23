@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Euclid Circular A Bold';
+    src: url('../../../fonts/Euclid Circular A Regular.ttf') format('opentype'); /* Укажите правильный путь и формат */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .Home {
     display: flex;
     justify-content:  flex-start;
@@ -14,61 +21,89 @@
     background-color: #AE97E8;
     flex-wrap: wrap;
     padding: 40px; /* Отступы вокруг контейнера, если необходимо */
+    color: white;
 }
 .Slider {
+    margin-top: -200px; /* Поднимаем слайдер вверх, чтобы он заходил на header */
     display: flex;
-    flex-direction: row; /* Слайдеры располагаются в строку */
-    overflow: hidden; /* Прячем содержимое, выходящее за пределы контейнера */
     z-index: 9; /* Устанавливаем высокий z-index для отображения поверх других элементов */
     width: 100%; /* Используем всю ширину контейнера */
-    height: 110%; /* Используем всю высоту контейнера */
+    height: 100%; /* Используем всю высоту контейнера */
     gap: 15px; /* Отступ между слайдами */
+    overflow: hidden; /* Прячем содержимое, выходящее за пределы контейнера */
     position: relative; /* Для абсолютного позиционирования внутри */
 }
 .Slide1 {
     display: flex;
-    height: 1038px;
-    width: 614px;
     background-color: #C5B0FAB2;
     border-radius: 25px; /* Закругляем углы */
     padding: 15px;
     transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
-    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Располагает элементы в колонку */
+    text-align: center; /* Центрируем текст внутри блока */
 }
 .Slide2 {
-    height: 1038px;
-    width: 614px;
+    display: flex;
     background-color:#FA8FEF;
     border-radius: 25px; /* Закругляем углы */
     padding: 15px;
     transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
-    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Располагает элементы в колонку */
+    text-align: center; /* Центрируем текст внутри блока */
 }
 .Slide3 {
-    height: 1038px;
-    width: 614px;
+    display: flex;
     background-color: #AECFFF;
     border-radius: 25px; /* Закругляем углы */
     padding: 15px;
     transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
-    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Располагает элементы в колонку */
+    text-align: center; /* Центрируем текст внутри блока */
 }
 
 .Slide1:hover, .Slide2:hover, .Slide3:hover {
     flex: 3; /* Увеличиваем ширину слайда при наведении */
-    transform: scale(1.05); /* Немного увеличиваем размер слайда */
+    transform: scale(1); /* Немного увеличиваем размер слайда */
+
 }
 
 /* Остальные слайды сужаются */
 .Slider > div:not(:hover) {
     flex: 1; /* Остальные слайды сужаются */
 }
+
+.cost {
+    align-items: center;
+    font-size: 20px;
+}
+
+.price {
+    font-family: "Floreste";
+    font-size: 28px;
+}
+
+.description {
+    border-bottom: 2px solid #FFFFFF33; /* Толщина, стиль и цвет рамки */
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
 .custom-text {
     font-family: 'Floreste', sans-serif;
     font-size: 212px;
     color: #CBB6FF99; /* Пример цвета для текста */
     margin: 0; /* Убираем стандартные отступы для <p> */
 }
+
 /* Стили для десктопов (ширина экрана больше 768px) */
 @media (min-width: 768px) {
     .header, .footer {
