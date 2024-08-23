@@ -10,8 +10,58 @@
     justify-content:  flex-start;
     align-items: center;
     height: 100vh;
+    width: auto;
     background-color: #AE97E8;
+    flex-wrap: wrap;
     padding: 40px; /* Отступы вокруг контейнера, если необходимо */
+}
+.Slider {
+    display: flex;
+    flex-direction: row; /* Слайдеры располагаются в строку */
+    overflow: hidden; /* Прячем содержимое, выходящее за пределы контейнера */
+    z-index: 9; /* Устанавливаем высокий z-index для отображения поверх других элементов */
+    width: 100%; /* Используем всю ширину контейнера */
+    height: 110%; /* Используем всю высоту контейнера */
+    gap: 15px; /* Отступ между слайдами */
+    position: relative; /* Для абсолютного позиционирования внутри */
+}
+.Slide1 {
+    display: flex;
+    height: 1038px;
+    width: 614px;
+    background-color: #C5B0FAB2;
+    border-radius: 25px; /* Закругляем углы */
+    padding: 15px;
+    transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
+    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+}
+.Slide2 {
+    height: 1038px;
+    width: 614px;
+    background-color:#FA8FEF;
+    border-radius: 25px; /* Закругляем углы */
+    padding: 15px;
+    transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
+    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+}
+.Slide3 {
+    height: 1038px;
+    width: 614px;
+    background-color: #AECFFF;
+    border-radius: 25px; /* Закругляем углы */
+    padding: 15px;
+    transition: flex 0.5s ease-in-out; /* Плавный переход для изменения ширины */
+    clip-path: inset(0 round 15px); /* Закрепляем закругленные углы */
+}
+
+.Slide1:hover, .Slide2:hover, .Slide3:hover {
+    flex: 3; /* Увеличиваем ширину слайда при наведении */
+    transform: scale(1.05); /* Немного увеличиваем размер слайда */
+}
+
+/* Остальные слайды сужаются */
+.Slider > div:not(:hover) {
+    flex: 1; /* Остальные слайды сужаются */
 }
 .custom-text {
     font-family: 'Floreste', sans-serif;

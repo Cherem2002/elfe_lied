@@ -6,7 +6,17 @@ const Home = () => {
 
     return (
         <div className="Home">
-            <p className="custom-text">BENJAMIN MOORE</p>
+            <div className="Slider">
+                <div className='Slide1'>
+
+                </div>
+                <div className='Slide2'>
+                    
+                </div>
+                <div className='Slide3'>
+
+                </div>
+            </div>
         </div>
     );
 };
