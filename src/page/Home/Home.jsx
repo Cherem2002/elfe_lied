@@ -7,6 +7,10 @@ import { ReactComponent as Lamps } from './lamps.svg'; // Импортируйт
 import { ReactComponent as Chairs } from './chairs.svg'; // Импортируйте SVG как компонент
 import { ReactComponent as Tables } from './tables.svg'; // Импортируйте SVG как компонент
 import { ReactComponent as Mirors } from './mirors.svg'; // Импортируйте SVG как компонент
+import { ReactComponent as Line } from './lines.svg'; // Импортируйте SVG как компонент
+import { ReactComponent as Article1 } from './article1.svg'; // Импортируйте SVG как компонент
+import { ReactComponent as Article2 } from './article2.svg'; // Импортируйте SVG как компонент
+import { ReactComponent as Article3 } from './article3.svg'; // Импортируйте SVG как компонент
 
 
 const Home = () => {
@@ -49,6 +53,15 @@ const Home = () => {
                     <Chairs className="Chairs-svg" />
                     <Tables className="Tables-svg" />
                     <Mirors className="Mirors-svg" />
+                </div>
+            </div>
+            <Line className="Line-svg" />
+            <div className='Blog'>
+                <h3>БЛОГ</h3>
+                <div className='Feed'>
+                    <Article1 className="article1-svg" />
+                    <Article2 className="article2-svg" />
+                    <Article3 className="article3-svg" />
                 </div>
             </div>
         </div>
