@@ -16,15 +16,16 @@
     display: flex;
     justify-content:  flex-start;
     align-items: center;
-    height: 100vh;
+    height: auto;
     width: auto;
     background-color: #AE97E8;
     flex-wrap: wrap;
     padding: 40px; /* Отступы вокруг контейнера, если необходимо */
     color: white;
+    flex-direction: row; /* Располагает элементы в колонку */
 }
 .Slider {
-    margin-top: -200px; /* Поднимаем слайдер вверх, чтобы он заходил на header */
+    margin-top: -100px; /* Поднимаем слайдер вверх, чтобы он заходил на header */
     display: flex;
     z-index: 9; /* Устанавливаем высокий z-index для отображения поверх других элементов */
     width: 100%; /* Используем всю ширину контейнера */
@@ -76,6 +77,9 @@
 
 }
 
+.lamp1-svg, .chair1-svg, .table1-svg {
+    margin-top: 50px;
+}
 /* Остальные слайды сужаются */
 .Slider > div:not(:hover) {
     flex: 1; /* Остальные слайды сужаются */
@@ -95,6 +99,30 @@
     border-bottom: 2px solid #FFFFFF33; /* Толщина, стиль и цвет рамки */
     padding-bottom: 15px;
     font-size: 15px;
+}
+
+.Category {
+ text-align: center;
+ font-size: 60px;
+}
+
+.Category-List {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    flex-wrap: wrap; /* Перенос элементов на следующую строку, если они не помещаются */
+    gap: 10px; /* Отступы между элементами */
+}
+
+.Category-List .lamps-svg,
+.Category-List .Chairs-svg,
+.Category-List .Tables-svg,
+.Category-List .Mirors-svg {
+    flex: 1; /* Позволяет элементам занимать равное пространство */
+    max-width: 375px; /* Максимальная ширина иконок (или другой размер по вашему выбору) */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    /* Если нужно, добавьте дополнительные стили для управления размером */
 }
 
 .custom-text {
