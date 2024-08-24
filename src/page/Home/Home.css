@@ -79,6 +79,7 @@
 
 .lamp1-svg, .chair1-svg, .table1-svg {
     margin-top: 50px;
+    position: relative;
 }
 /* Остальные слайды сужаются */
 .Slider > div:not(:hover) {
@@ -111,8 +112,8 @@
     display: flex;
     justify-content: space-between; /* Равномерное распределение элементов по горизонтали */
     align-items: center; /* Выравнивание элементов по вертикали */
-    flex-wrap: wrap; /* Перенос элементов на следующую строку, если они не помещаются */
-    gap: 10px; /* Отступы между элементами */
+    flex-wrap: nowrap; /* Перенос элементов на следующую строку, если они не помещаются */
+    gap: 5px; /* Отступы между элементами */
 }
 
 .Category-List .lamps-svg,
@@ -120,10 +121,77 @@
 .Category-List .Tables-svg,
 .Category-List .Mirors-svg {
     flex: 1; /* Позволяет элементам занимать равное пространство */
-    max-width: 375px; /* Максимальная ширина иконок (или другой размер по вашему выбору) */
+    max-width: 350px; /* Максимальная ширина иконок (или другой размер по вашему выбору) */
     height: auto; /* Автоматическая высота для сохранения пропорций */
     /* Если нужно, добавьте дополнительные стили для управления размером */
 }
+
+.List{
+    position: relative;
+}
+.arrow-1 {
+    left: 120px;
+    bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #8A74BE;
+    border: 2px solid #D9FF5A; /* Толщина, стиль и цвет рамки */
+    transition: background-color 0.3s ease;
+    
+}
+
+.arrow-1 div {
+    position: relative;
+    left: 40px;
+    width: 2px;
+    height: 25px;
+    background-color: #D9FF5A;
+    top: 25px;
+    display: block;
+}
+
+.arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 9px;
+    left: -2.5px; /* Сдвиг влево для правильного расположения наконечника */
+    bottom: -2.5px;
+    background-color: #D9FF5A;
+    transform: rotate(-45deg); /* Поворот влево */
+}
+
+.arrow-1 div::before {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 9px;
+    left: 2.5px; /* Сдвиг вправо для правильного расположения наконечника */
+    bottom: -2.5px;
+    background-color: #D9FF5A;
+    transform: rotate(45deg); /* Поворот вправо */
+}
+
+.arrow-1:hover {
+    background-color: #D9FF5A;
+}
+
+.arrow-1:hover div::after {
+    background-color: #8A74BE; /* Цвет стрелки при наведении и нажатии */
+}
+
+.arrow-1:hover div::before
+{
+    background-color: #8A74BE; /* Цвет стрелки при наведении и нажатии */
+}
+
+.arrow-1:hover div {
+    background-color: #8A74BE; /* Цвет стрелки при нажатии */
+}
+
 .Blog {
     font-size: 60px;
 }

@@ -49,10 +49,30 @@ const Home = () => {
             <div className='Category'>
                 <h3>КАТЕГОРИИ</h3>
                 <div className='Category-List'>
-                    <Lamps className="lamps-svg" />
-                    <Chairs className="Chairs-svg" />
-                    <Tables className="Tables-svg" />
-                    <Mirors className="Mirors-svg" />
+                    <div className='List'>
+                        <Lamps className="lamps-svg" />
+                        <div class="arrow-1">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div className='List'>
+                        <Chairs className="Chairs-svg" />
+                        <div class="arrow-1">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div className='List'>
+                        <Tables className="Tables-svg" />
+                        <div class="arrow-1">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div className='List'>
+                        <Mirors className="Mirors-svg" />
+                        <div class="arrow-1">
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Line className="Line-svg" />
